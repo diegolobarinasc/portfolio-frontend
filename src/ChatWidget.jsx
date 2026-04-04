@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
 const sessionId = crypto.randomUUID();
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
@@ -34,7 +35,10 @@ export default function ChatWidget() {
     try {
         const res = await fetch("https://portfolio-backend-xyze.onrender.com/ask", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { 
+          "Content-Type": "application/json", 
+          "x-api-key": API_KEY 
+        },
         body: JSON.stringify({
           question: input,
           history: messages,
