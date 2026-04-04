@@ -237,3 +237,54 @@
   color: #ccd6e0;
   margin: 0 0 0 18px;
 }
+
+@media (max-width: 768px) {
+
+  .cv-container {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .cv-sidebar {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .cv-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .cv-name {
+    font-size: 22px;
+  }
+
+  .cv-subtitle {
+    font-size: 13px;
+  }
+
+  .cv-summary {
+    font-size: 14px;
+  }
+
+  .cv-section-block {
+    padding: 16px;
+  }
+
+  .cv-header-block {
+    padding: 16px;
+  }
+
+  .cv-job-title {
+    font-size: 14px;
+  }
+
+  .cv-job-bullets li {
+    font-size: 13px;
+  }
+
+  .cv-section-title {
+    font-size: 16px;
+  }
+}
