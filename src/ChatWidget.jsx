@@ -32,7 +32,7 @@ export default function ChatWidget() {
 
 
     try {
-        const res = await fetch("http://localhost:8000/ask", {
+        const res = await fetch("https://portfolio-backend-xyze.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
