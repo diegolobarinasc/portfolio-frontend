@@ -1,0 +1,246 @@
+/* ─── Layout ─── */
+
+body {
+  background-color: #0b0f19;
+  border: 1px solid #000;
+  font-family: Arial, sans-serif;
+}
+
+
+
+.div-menubar {
+  text-align: center;
+  -webkit-text-fill-color: inherit;
+  background-color: #182338;
+  background-clip: border-box;
+  border: 1px solid #222;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 100
+}
+
+
+.div-main {
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding-top: 10px;
+  display: flex;
+  position: sticky;
+}
+
+.image-float {
+  float: left;        /* o right para que quede a la derecha */
+  width: 750px;       /* el tamaño que quieras */
+  margin-right: 15px; /* espacio entre imagen y texto */
+  margin-bottom: 10px;
+}
+
+/* ─── Nav buttons ─── */
+
+.button1,
+.button2,
+.button3,
+.button4,
+.button5,
+.button6{
+  font-size: 21px;
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 15px;
+}
+
+/* ─── Content ─── */
+
+.heading {
+  color: #fff;
+  text-align: center;
+  background-color: #ffffff0d;
+  border-radius: 12px;
+  margin: 20px 60px;
+  padding: 20px 40px;
+  font-size: 35px;
+}
+
+.text-block {
+  color: #fff;
+  text-align: center;
+  background-color: #ffffff0d;
+  border-radius: 12px;
+  width: 75%;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 20px;
+  font-size: 19px;
+  line-height: 35px;
+
+}
+
+
+.text-block-largo {
+  color: #fff;
+  background-color: #ffffff0d;
+  border-radius: 12px;
+  width: 75%;
+  margin-left: 60px;
+  margin-right: 60px;
+  padding: 20px;
+  font-size: 19px;
+  line-height: 35px;
+  text-align: left;
+  text-indent: 35px;
+}
+
+/* Placeholder del chatbot */
+#chatbot-placeholder {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.chat-button {
+  border: none;
+  border-radius: 50px;
+  padding: 12px 18px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-list li {
+  color: white;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-list a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* CHAT WIDGET */
+
+.chat-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+}
+
+.chat-toggle {
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  background: #2563eb;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.chat-box {
+  width: 400px;
+  height: 600px;
+  background: #111827;
+  border: 1px solid #333;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+}
+
+.chat-header {
+  padding: 12px;
+  background: #1f2937;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+.chat-close {
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+  font-size: 14px;
+}
+
+.chat-message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  max-width: 80%;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.chat-message.user {
+  background: #2563eb;
+  color: white;
+  align-self: flex-end;
+}
+
+.chat-message.bot {
+  background: #374151;
+  color: white;
+  align-self: flex-start;
+  white-space: pre-wrap; /* respeta saltos de línea */
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #333;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background: #0b0f19;
+  color: white;
+}
+
+.chat-input button {
+  border: none;
+  padding: 10px 14px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
