@@ -6,7 +6,7 @@ const API_KEY = import.meta.env.VITE_API_KEY;
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState([
-    { role: "bot", text: "Hola 👋 Soy el asistente de esta página.\n\nPuedes preguntarme sobre Diego, sobre esta página o sobre como funciono yo mismo. ¿En qué puedo ayudarte?." },
+    { role: "bot", text: "Hola 👋 Soy el asistente de esta página.\n\nPuedes preguntarme sobre Diego, sobre esta página o sobre como funciono yo mismo.\n\nTen en cuenta que la primera respuesta puede tardar unos segundos en llegar.\n\n¿En qué puedo ayudarte?." },
   ]);
   const [input, setInput] = useState("");
 
