@@ -78,7 +78,7 @@ export default function ChatWidget() {
       {open && (
         <div className="chat-box">
           <div className="chat-header">
-            <span>Chat CV</span>
+            <span>Asistente</span>
             <button className="chat-close" onClick={() => setOpen(false)}>
               ✖
             </button>
