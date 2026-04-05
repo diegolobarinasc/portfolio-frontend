@@ -22,20 +22,18 @@ export default function ChatWidget() {
     if (!input.trim()) return;
 
     const userMsg = { role: "user", text: input };
-
-    setMessages((prev) => [...prev, userMsg]);
-
-    // Respuesta simulada del bot
-    ///setMessages((prev) => [
-    ///  ...prev,
-    ///  userMsg,
-    ///  { role: "bot", text: "Esta es una respuesta simulada (sin backend todavía)." },
-    ///]);
-
+    const updatedMessages = [...messages, userMsg];
+    setMessages(updatedMessages);
     setInput("");
 
 
+    // Mensaje de carga
+    setMessages((prev) => [...prev, { role: "bot", text: null, loading: true }]);
+
     try {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 70000); // 70 segundos
+
         const res = await fetch(`${API_URL}/ask`, {
         method: "POST",
         headers: { 
@@ -47,14 +45,23 @@ export default function ChatWidget() {
           history: messages,
           session_id: sessionId
         }),
+        signal: controller.signal
     });
 
+        clearTimeout(timeout);
+
         const data = await res.json();
+
         const botMsg = { role: "bot", text: data.answer };
-        setMessages((prev) => [...prev, botMsg]);
+
+        // Sustituye el "..." por la respuesta real
+        setMessages((prev) => [...prev.slice(0, -1), botMsg]);
+
     } catch (err) {
-        const botMsg = { role: "bot", text: "Error: no se pudo conectar al servidor." };
-        setMessages((prev) => [...prev, botMsg]);
+      const botMsg = err.name === "AbortError"
+        ? "El servidor está tardando en responder. Inténtalo de nuevo en unos segundos."
+        : "Error: no se pudo conectar al servidor.";
+      setMessages((prev) => [...prev.slice(0, -1), botMsg]);
     }
 
 
@@ -80,7 +87,7 @@ export default function ChatWidget() {
           <div className="chat-messages">
             {messages.map((m, i) => (
               <div key={i} className={`chat-message ${m.role} whitespace-pre-wrap`}>
-                {m.text}
+                {m.loading ? <span className="loading-dots" /> : m.text}
               </div>
             ))}
             <div ref={messagesEndRef} />
