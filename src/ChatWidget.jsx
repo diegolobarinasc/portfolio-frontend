@@ -36,7 +36,7 @@ export default function ChatWidget() {
 
 
     try {
-        const res = await fetch("${API_URL}/ask", {
+        const res = await fetch(`${API_URL}/ask`, {
         method: "POST",
         headers: { 
           "Content-Type": "application/json", 
