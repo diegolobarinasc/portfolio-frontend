@@ -1,7 +1,10 @@
 import { useState, useRef, useEffect } from "react";
 
 const sessionId = crypto.randomUUID();
-const API_KEY = import.meta.env.VITE_API_KEY;
+const API_URL = import.meta.env.VITE_API_URL; // URL del backend
+const API_KEY = import.meta.env.VITE_API_KEY; // Token para el backend
+
+
 
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
@@ -33,7 +36,7 @@ export default function ChatWidget() {
 
 
     try {
-        const res = await fetch("https://portfolio-backend-xyze.onrender.com/ask", {
+        const res = await fetch("${API_URL}/ask", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json", 
