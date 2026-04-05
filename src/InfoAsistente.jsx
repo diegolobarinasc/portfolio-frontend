@@ -14,6 +14,10 @@ export default function InfoAsistente() {
         <br></br><br></br>
         Además, con un número reducido de intenciones definidas, mantener un volumen de ejemplos suficiente para que el sistema fuera robusto no resultaba práctico. Por eso se optó por usar el propio LLM como clasificador: entiende el significado completo de la pregunta sin necesidad de ejemplos previos, con menor mantenimiento y mejor resultado.
         <br></br><br></br>
+        El historial reciente de la conversación se incluye en cada petición, lo que permite al asistente mantener el contexto de los últimos intercambios sin necesidad de almacenamiento en servidor.
+        <br></br><br></br>
+        Todas las conversaciones se registran en una base de datos externa — incluyendo la intención detectada, la pregunta y la respuesta — lo que permite analizar el uso del asistente y detectar posibles problemas.
+        <br></br><br></br>
         Todo el comportamiento del asistente está definido en archivos de configuración YAML y JSON externos al código, lo que permite modificarlo sin tocar el backend.
       </div>
         
