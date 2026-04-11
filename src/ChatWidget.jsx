@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import ReactMarkdown from "react-markdown";
 
 const sessionId = crypto.randomUUID();
 const API_URL = import.meta.env.VITE_API_URL; // URL del backend
@@ -15,6 +16,7 @@ export default function ChatWidget() {
 
   const messagesEndRef = useRef(null);
   useEffect(() => {
+  
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
     }, [messages]);
 
@@ -87,7 +89,19 @@ export default function ChatWidget() {
           <div className="chat-messages">
             {messages.map((m, i) => (
               <div key={i} className={`chat-message ${m.role} whitespace-pre-wrap`}>
-                {m.loading ? <span className="loading-dots" /> : m.text}
+                {m.loading ? (
+                  <span className="loading-dots" />
+                ) : (
+                  <ReactMarkdown
+                    components={{
+                      a: ({ href, children }) => (
+                        <a href={href} target="_blank" rel="noreferrer">{children}</a>
+                      )
+                    }}
+                  >
+                    {m.text}
+                  </ReactMarkdown>
+                )}
               </div>
             ))}
             <div ref={messagesEndRef} />

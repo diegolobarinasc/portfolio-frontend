@@ -42,12 +42,12 @@ export default function CV() {
             <h3 className="cv-sidebar-title">HABILIDADES TÉCNICAS</h3>
             <ul className="cv-skills-list">
               <li><strong>IA Conversacional</strong>: Dialogflow CX, IBM Watson Assistant</li>
-              <li><strong>NLP aplicado</strong>: intents, entidades, training phrases</li>
+              <li><strong>NLP aplicado</strong>: intents, entities, training phrases</li>
               <li><strong>Diseño Conversacional</strong>: flujos, UX conversacional, gestión de errores</li>
               <li><strong>Lenguajes</strong>: JavaScript, Python, HTML, VBA, Twig</li>
               <li><strong>Datos y Configuración</strong>: JSON</li>
               <li><strong>Automatización</strong>: UiPath</li>
-              <li><strong>Herramientas</strong>: Jira, Confluence, Microsoft Excel</li>
+              <li><strong>Herramientas</strong>: Postman, Jira, Confluence, Microsoft Excel</li>
             </ul>
           </div>
  
@@ -104,7 +104,7 @@ export default function CV() {
               <ul className="cv-job-bullets">
                 <li>Diseño y mantenimiento de <strong>chatbots de IA conversacional</strong> para atención al cliente y automatización de procesos.</li>
                 <li>Trabajo con <strong>Dialogflow CX</strong> e <strong>IBM Watson Assistant</strong> en entornos productivos.</li>
-                <li>Definición y optimización de <strong>intents</strong>, <strong>entidades</strong> y <strong>flujos conversacionales</strong> aplicando <strong>NLP a nivel de plataforma</strong>.</li>
+                <li>Definición y optimización de <strong>intents</strong>, <strong>entities </strong> y <strong>flujos conversacionales</strong> aplicando <strong>NLP a nivel de plataforma</strong>.</li>
                 <li>Rápida adaptación a nuevas herramientas y plataformas, aplicando conocimientos a proyectos productivos.</li>
                 <li>Análisis de logs y métricas para <strong>mejora continua del rendimiento y UX conversacional</strong>.</li>
               </ul>

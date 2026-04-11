@@ -201,6 +201,19 @@ body {
   font-size: 14px;
 }
 
+.chat-messages a {
+  color: white;
+  text-decoration: underline;
+}
+
+.chat-messages p {
+  margin: 0 0 8px 0;
+}
+
+.chat-messages p:last-child {
+  margin-bottom: 0;
+}
+
 .chat-message {
   padding: 10px;
   margin-bottom: 10px;
