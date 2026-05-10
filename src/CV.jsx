@@ -83,12 +83,11 @@ export default function CV() {
             <p className="cv-summary">
               Especialista en <strong>IA conversacional</strong> con amplia experiencia en el diseño,
               desarrollo y optimización de chatbots empresariales para atención al cliente y automatización
-              de procesos. Amplia experiencia en <strong>Google Dialogflow CX</strong> e{" "}
+              de procesos. Especializado en <strong>Google Dialogflow CX</strong> e{" "}
               <strong>IBM Watson Assistant</strong>, centrada en el <strong>diseño conversacional</strong>,
               definición y optimización de <strong>intents y entidades</strong>, y mejora continua basada en{" "}
               <strong>análisis de logs, métricas de rendimiento y técnicas de NLP aplicadas mediante
-              plataforma</strong>. Perfil técnico con background en análisis de datos, automatización y
-              entornos complejos de producción.
+              plataforma</strong>. Perfil técnico con background en automatización, análisis de datos y coordinación en proyectos con múltiples actores.
             </p>
           </div>
  
@@ -102,11 +101,11 @@ export default function CV() {
               </div>
               <h3 className="cv-job-title">Conversational IA Specialist</h3>
               <ul className="cv-job-bullets">
-                <li>Diseño y mantenimiento de <strong>chatbots de IA conversacional</strong> para atención al cliente y automatización de procesos.</li>
-                <li>Trabajo con <strong>Dialogflow CX</strong> e <strong>IBM Watson Assistant</strong> en entornos productivos.</li>
-                <li>Definición y optimización de <strong>intents</strong>, <strong>entities </strong> y <strong>flujos conversacionales</strong> aplicando <strong>NLP a nivel de plataforma</strong>.</li>
+                <li>Diseño, implementación y optimización de <strong>chatbots empresariales</strong> sobre <strong>Dialogflow CX</strong> e <strong>IBM Watson Assistant</strong> en entornos productivos: definición de <strong>intents</strong>, <strong>entidades</strong> y <strong>flujos conversacionales</strong> aplicando <strong>NLPa nivel de plataforma</strong> .</li>
                 <li>Rápida adaptación a nuevas herramientas y plataformas, aplicando conocimientos a proyectos productivos.</li>
                 <li>Análisis de logs y métricas para <strong>mejora continua del rendimiento y UX conversacional</strong>.</li>
+                <li>Referente técnico de Dialogflow CX en el proyecto, con interlocución directa con el cliente, otras consultoras y diseñadores de diálogo para trasladar capacidades de la plataforma a soluciones funcionales con buena UX.</li>
+                <li>Asesoramiento al cliente en la planificación de sprints: definición de tareas por iteración y creación de tickets en Jira.</li>
               </ul>
             </div>
  
@@ -118,6 +117,7 @@ export default function CV() {
               <h3 className="cv-job-title">Coordinador de Planificación</h3>
               <ul className="cv-job-bullets">
                 <li>Planificación operativa y <strong>dimensionamiento de personal (Erlang)</strong> para cumplimiento de KPIs.</li>
+                <li><strong>Coordinación de equipos multidisciplinares</strong> y gestión operativa en tiempo real, asegurando alineación entre objetivos de negocio y capacidades del equipo.</li>
                 <li>Supervisión de equipos y gestión operativa en tiempo real.</li>
               </ul>
             </div>
