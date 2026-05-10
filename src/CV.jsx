@@ -87,7 +87,7 @@ export default function CV() {
               <strong>IBM Watson Assistant</strong>, centrada en el <strong>diseño conversacional</strong>,
               definición y optimización de <strong>intents y entidades</strong>, y mejora continua basada en{" "}
               <strong>análisis de logs, métricas de rendimiento y técnicas de NLP aplicadas mediante
-              plataforma</strong>. Perfil técnico con background en automatización, análisis de datos y coordinación en proyectos con múltiples actores.
+              plataforma</strong>. Perfil técnico con background en automatización, análisis de datos y coordinación en entornos multidisciplinares.
             </p>
           </div>
  
